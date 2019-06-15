@@ -16,8 +16,7 @@
   ],
   "scripts": {
     "lint": "eslint ./src",
-    "test": "node util.js copy2Demo",
-    "build": "set NODE_ENV=prod&webpack --display-error-details&",
+    "build": "set NODE_ENV=prod&webpack --display-error-details&node util delDemo&node util copy2Demo",
     "dev": "set NODE_ENV=dev&webpack --display-error-details --watch"
   },
   "author": {
