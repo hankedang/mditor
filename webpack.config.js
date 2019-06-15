@@ -6,7 +6,8 @@ const os = require('os');
 const pkg = require('./package.json');
 
 const ENV = process.env.NODE_ENV || 'prod';
-console.log(`${os.EOL}NODE_ENV:`, ENV);
+console.log(`${os.EOL}----------NODE_ENV:`, ENV);
+console.log(ENV === 'prod')
 
 const cssBundlePlugin = new ExtractTextPlugin(`css/mditor${ENV == 'prod' ? '.min' : ''}.css`);
 
@@ -35,9 +36,10 @@ const plugins = [
   cleanPlugin,
   htmlPlugin,
   cssBundlePlugin,
-  bannerPlugin,
+  bannerPlugin
 ];
 if (ENV === 'prod') plugins.push(compressPlugin);
+console.log(plugins)
 
 // webpack loaders
 const loaders = [{

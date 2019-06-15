@@ -6,7 +6,7 @@
   "main": "./lib/server/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/houfeng/mditor.git"
+    "url": "git+https://github.com/hankedang/mditor.git"
   },
   "keywords": [
     "mditor",
@@ -15,31 +15,17 @@
     "editor"
   ],
   "scripts": {
-    "start": "./bin/start.sh",
-    "stop": "./bin/stop.sh",
-    "restart": "./bin/restart.sh",
-    "clear": "./bin/clear.sh",
-    "wclear": "call bin\\clear.cmd",
     "lint": "eslint ./src",
-    "build": "./bin/build.sh",
-    "watch": "./bin/watch.sh",
-    "dev": "webpack --display-error-details --watch",
-    "unit": "./bin/unit.sh",
-    "e2e": "./bin/e2e.sh",
-    "test": "./bin/test.sh"
+    "test": "node util.js copy2Demo",
+    "build": "set NODE_ENV=prod&webpack --display-error-details&",
+    "dev": "set NODE_ENV=dev&webpack --display-error-details --watch"
   },
   "author": {
-    "name": "Houfeng",
-    "email": "admin@xhou.net",
-    "url": "http://houfeng.net"
+    "name": "hankedang",
+    "email": "hankedang@runexception.com"
   },
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/houfeng/mditor/issues"
-  },
-  "homepage": "http://mditor.com",
   "dependencies": {
-    "font-awesome": "^4.7.0",
     "github-markdown-css": "^2.4.1",
     "marked": "^0.3.6",
     "mokit": "^3.1.2",
@@ -47,11 +33,8 @@
     "prismjs": "^1.8.3",
     "shortcut-key": "^1.0.0"
   },
-  "dev": {
-    "host": "localhost",
-    "port": 8008
-  },
   "devDependencies": {
+    "del": "^4.1.1",
     "babel-cli": "^6.24.1",
     "babel-core": "^6.21.0",
     "babel-eslint": "^7.1.1",

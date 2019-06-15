@@ -5,12 +5,13 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="initial-scale=1.0, width=device-width, user-scalable=yes" />
 	<title>mditor</title>
+	<link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	
 	<link href="css/mditor.min.css" rel="stylesheet">
 	
 	<style>
 		.mditor {
-			margin: 45px auto;
+			margin: 0 auto;
 			max-width: 880px;
 		}
 	</style>
@@ -21,7 +22,7 @@
 	<div>
 		<textarea id="editor">## 只求极致
 [ **M** ] arkdown + E [ **ditor** ] = **Mditor**  
-> Mditor 是一个简洁、易于集成、方便扩展、期望舒服的编写 markdown 的编辑器，仅此而已...</textarea>
+> Mditor 是一个简洁、易于集成、方便扩展、期望阿斯顿发生舒服的编写 markdown 的编辑器，仅此而已...</textarea>
 	</div>
 
 	
@@ -34,7 +35,10 @@
 			console.log('mditor', mditor);
 			console.log('toolbar', mditor.toolbar);
 			mditor.on('changed', function(){
-				//console.log('changed',mditor.value);
+				console.log('changed',mditor.value);
+			});
+			mditor.editor.on('input',function(event){
+				console.log('input', event);
 			});
 			mditor.editor.on('drop',function(event){
 				console.log('drop',event);
