@@ -2,19 +2,16 @@
 
 [ **M** ] arkdown + E [ **ditor** ] = **Mditor**    
 
-[![version](https://badge.fury.io/js/mditor.svg)](http://badge.fury.io/js/mditor)  
 
 Mditor 是一个简洁、易于集成、方便扩展、期望舒服的编写 markdown 的编辑器，仅此而已...  
 
 支持浏览器: chrome/safari/firefox/ie9+
 
-![image](http://embed.mditor.com/images/mditor.png)
+
 
 ## 在线体验
-[在线 demo](http://embed.mditor.com/demo/index.html)  
+[在线 demo](https://www.runexception.com)  
 
-## 使用桌面版
-下载桌面版本 [http://mditor.com/](http://mditor.com/)
   
 ## 在浏览器集成 Mditor
 
@@ -28,15 +25,6 @@ Mditor 是一个简洁、易于集成、方便扩展、期望舒服的编写 mar
 引用 Mditor 脚本文件
 ```html
 <script src="your-path/dist/js/mditor.min.js"></script>
-```
-
-当然，也可以使用 CDN 资源
-```html
-...
-<link rel="stylesheet" href="https://unpkg.com/mditor@1.0.5/dist/css/mditor.min.css" />
-...
-<script src="https://unpkg.com/mditor@1.0.5/dist/js/mditor.min.js"></script>
-...
 ```
 
 ##### 第二步:
